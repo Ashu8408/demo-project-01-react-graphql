@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+body {
+  cursor: none; /* hide default cursor */
+}
+
+.cursor {
+  position: fixed;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+
+  /* 🔍 magnifying effect */
+  background-image: url("/jupiter.jpg");
+  background-repeat: no-repeat;
+  background-size: 20%; /* zoom level */
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
