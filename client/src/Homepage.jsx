@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 
 export default function Homepage() {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-center">
+    <div className="flex justify-center items-center min-h-screen bg-cover bg-center px-4 sm:px-6 md:px-8 cursor-none p-20" 
+         style={{ backgroundImage: "url('/jupiter.jpg')" }}
+         >
       {/* Card 1 (with nested Card 2 inside) */}
       <div
         name="card_1"

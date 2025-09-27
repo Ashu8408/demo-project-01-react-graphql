@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { gql } from "@apollo/client";
-import { useQuery, useLazyQuery, useMutation } from "@apollo/client/react";
+import { useQuery } from "@apollo/client/react";
 
 // import PLANETS from "../data.js";
 
