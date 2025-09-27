@@ -1,37 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'
+import { ApolloClient, InMemoryCache, HttpLink, } from "@apollo/client";
+import { ApolloProvider } from "@apollo/client/react";
+import Navbar from './Components/Navbar'
+import LensMouse from './LensMouse'
+import Homepage from './Homepage'
+// import SolarSystem from './Components/SolarSystem'
+// import Planet from "./Components/Planet";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const client = new ApolloClient({
+    cache: new InMemoryCache(),
+    link: new HttpLink({ uri: "http://localhost:4000" }),
+});
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+return (
+    <ApolloProvider client={client}>
+      <div className="h-screen bg-cover bg-center relative" 
+         style={{ backgroundImage: "url('/galaxy.jpg')" }}
+         >
+      <Router>
+        <Navbar />
+        <LensMouse />
 
-      <h1 className="text-3xl font-bold bg-red-300 underline">hello client</h1>
-    </>
-  )
+        <Routes>
+          
+          <Route path="/" element={<Homepage />} />
+          {/*<Route path="/SolarSystem" element={<SolarSystem />} />
+          <Route path="/planet/:name" element={<Planet />} />  */}
+
+        </Routes>
+      </Router>
+    </div>
+    </ApolloProvider>
+    
+  );
 }
 
-export default App
+
+
+export default App;
