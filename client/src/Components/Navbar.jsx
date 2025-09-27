@@ -80,18 +80,18 @@ export default function Navbar() {
         <div className="px-20 py-8 grid grid-cols-1 md:grid-cols-3 gap-6 max-h-[100vh] overflow-y-auto">
           {/* Column 1 */}
           <div className="rounded-3xl overflow-hidden">
-            <Link to ="/solarsystem">
+            <Link to ="/solarsystem" className="cursor-none">
               <img
                 src="./solar_system_menu.jpg"
                 alt="Explore Solar System"
-                className="h-auto max-h-[70vh] object-cover cursor-none rounded-3xl"
+                className="h-auto max-h-[70vh] object-cover rounded-3xl"
               />
             </Link>
           </div>
 
           {/* Column 2 */}
          {planetData?.planets?.map((planet) => (
-          <Link to={`/planet/${planet.name.toLowerCase()}`} key={planet.name.toLowerCase()}>
+          <Link to={`/planet/${planet.name.toLowerCase()}`} key={planet.name.toLowerCase()} className="cursor-none">
           <img
             src={planet.menu_image.toLowerCase()}
             alt={planet.name.toLowerCase()}
