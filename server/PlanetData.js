@@ -13,7 +13,7 @@ const PlanetList = [
   {
     id: 1,
     name: "Mercury",
-    image: "/mercury.jpg",
+    image: "/mercury.gif",
     menu_image: "/mercury_menu.jpg",
     details: {
       aphelion: "69,816,900 km (0.4667 AU)",
