@@ -84,9 +84,11 @@ if (loading) {
         <div className="planet-gif flex justify-center items-center">
           {selectedPlanet && (
             <img
-             src={`/solar_system_img/${selectedPlanet.image}`} 
+             src={`/raw${selectedPlanet.image}`} // check path correctly
             // src={`/solar_system_img/jupiter.mp4`} 
-             alt={selectedPlanet.name} className="max-w-[200px] sm:max-w-[300px] w-full shadow-lg"/>
+             alt={selectedPlanet.name} 
+             className="w-full h-full object-contain rounded-2xl shadow-lg overflow-y-auto max-h-[50vh] sm:max-h-[80vh]"
+            />
           )}
         </div>
 
