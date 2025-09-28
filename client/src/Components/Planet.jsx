@@ -51,10 +51,8 @@ export default function Planet() {
   }
 
   return (
-    <div
-      className="flex justify-center items-center min-h-screen bg-cover bg-center px-4 sm:px-6 md:px-8 cursor-none p-20"
-      style={{ backgroundImage: `url(/planet_bg/${planet.image})` }}
-    >
+    <div className="flex justify-center items-center min-h-screen w-full bg-no-repeat bg-center bg-cover sm:bg-fixed px-4 sm:px-6 md:px-8 cursor-none p-20"
+      style={{ backgroundImage: `url(/planet_bg/${planet.image})` }}>
       <div
         name="card_1"
         className="w-full sm:w-11/12 md:w-3/4 min-h-[60vh] md:min-h-[75vh] 
