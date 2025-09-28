@@ -53,7 +53,7 @@ export default function Planet() {
   return (
     <div
       className="flex justify-center items-center min-h-screen bg-cover bg-center px-4 sm:px-6 md:px-8 cursor-none p-20"
-      style={{ backgroundImage: `url(${planet.image})` }}
+      style={{ backgroundImage: `url(/planet_bg/${planet.image})` }}
     >
       <div
         name="card_1"
@@ -63,18 +63,16 @@ export default function Planet() {
                justify-center space-y-4 sm:space-y-6"
       >
         {/* Planet Title */}
-        <p className="font-serif text-gray-300 
-                 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 
-                 text-center">
-          {planet.name}
+        <p className="font-serif text-white 
+                 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center">
+          {planet.name.split("").join(" ")}
         </p>
 
         {/* Nested Card 2 */}
         <div
           name="card_2"
           className="w-full p-4 sm:p-6 border border-gray-950 
-                 rounded-lg bg-white/5 backdrop-blur-sm"
-        >
+                 rounded-lg bg-white/5 backdrop-blur-sm" >
           <p className="font-serif text-gray-300 text-sm sm:text-base md:text-lg text-center leading-relaxed">
             {planet.details?.about || "No details available"}
           </p>
