@@ -25,15 +25,21 @@ export default function Navbar() {
 
   // Close on outside click
   useEffect(() => {
+    // function handleClickOutside(e) {
+    //   if (
+    //     flyoutRef.current &&
+    //     !flyoutRef.current.contains(e.target) &&
+    //     btnRef.current &&
+    //     !btnRef.current.contains(e.target)
+    //   ) {
+    //     setIsOpen(false);
+    //   }
+    // }
     function handleClickOutside(e) {
-      if (
-        flyoutRef.current &&
-        !flyoutRef.current.contains(e.target) &&
-        btnRef.current &&
-        !btnRef.current.contains(e.target)
-      ) {
-        setIsOpen(false);
+      if (btnRef.current && btnRef.current.contains(e.target)) {
+        return; // don't close if clicking the toggle button
       }
+      setIsOpen(false);
     }
     window.addEventListener("click", handleClickOutside);
     return () => window.removeEventListener("click", handleClickOutside);
@@ -77,12 +83,12 @@ export default function Navbar() {
             : "opacity-0 scale-y-0 pointer-events-none"
         } origin-top`}
       >
-        <div className="px-20 py-8 grid grid-cols-1 md:grid-cols-3 gap-6 max-h-[100vh] overflow-y-auto">
+        <div className="px-20 py-8 grid grid-cols-1 md:grid-cols-3 gap-6 max-h-[100vh]  max-w-[50] overflow-y-auto">
           {/* Column 1 */}
           <div className="rounded-3xl overflow-hidden">
             <Link to ="/solarsystem" className="cursor-none">
               <img
-                src="./solar_system_menu.jpg"
+                src="./planet_menu_img/solar_system_menu.jpg"
                 alt="Explore Solar System"
                 className="h-auto max-h-[70vh] object-cover rounded-3xl"
               />
@@ -93,7 +99,7 @@ export default function Navbar() {
          {planetData?.planets?.map((planet) => (
           <Link to={`/planet/${planet.name.toLowerCase()}`} key={planet.name.toLowerCase()} className="cursor-none">
           <img
-            src={planet.menu_image.toLowerCase()}
+            src={`./planet_menu_img/${planet.menu_image.toLowerCase()}`}
             alt={planet.name.toLowerCase()}
             className="h-auto max-h-[70vh] object-cover rounded-3xl cursor-none hover:scale-105 transition"
           />
