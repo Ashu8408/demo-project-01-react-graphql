@@ -4,7 +4,7 @@ import { ApolloProvider } from "@apollo/client/react";
 import Navbar from './Components/Navbar'
 import LensMouse from './LensMouse'
 import Homepage from './Homepage'
-// import SolarSystem from './Components/SolarSystem'
+import SolarSystem from './Components/SolarSystem'
 import Planet from "./Components/Planet";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -28,7 +28,7 @@ return (
         <Routes>
           
           <Route path="/" element={<Homepage />} />
-          {/*<Route path="/SolarSystem" element={<SolarSystem />} /> */}
+          <Route path="/SolarSystem" element={<SolarSystem />} />
           <Route path="/planet/:name" element={<Planet />} /> 
 
         </Routes>

@@ -1,11 +1,11 @@
 const { gql } = require("apollo-server");
 
 const typeDefs = gql`
-    
+
     type PlanetDetails {
         # type: String!
         about: String
-        aphelion: String 
+        aphelion: String
         perihelion: String
         semiMajorAxis: String
         eccentricity: String
@@ -17,7 +17,7 @@ const typeDefs = gql`
         argumentOfPerihelion: String
         satellites: String
     }
-    
+
     type Planet {
         id: ID!,
         name: String!
