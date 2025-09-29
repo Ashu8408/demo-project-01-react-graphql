@@ -24,7 +24,7 @@ export default function Planet() {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center min-h-screen bg-black text-white">
+      <div className="flex justify-center items-center min-h-screen text-white">
         <h2 className="text-center text-2xl font-semibold">Loading...</h2>
       </div>
     );
@@ -33,7 +33,7 @@ export default function Planet() {
   if (planetError) {
     console.error(error);
     return (
-      <div className="flex justify-center items-center min-h-screen bg-black text-white">
+      <div className="flex justify-center items-center min-h-screen text-white">
         <h2 className="text-center text-2xl font-semibold">Error loading planet</h2>
       </div>
     );
@@ -45,7 +45,7 @@ export default function Planet() {
 
   if (!planet) {
     return (
-      <div className="flex justify-center items-center min-h-screen bg-black text-white">
+      <div className="flex justify-center items-center min-h-screen text-white">
         <h2 className="text-center text-2xl font-semibold">Planet not found</h2>
       </div>
     );
@@ -65,7 +65,7 @@ export default function Planet() {
             }
           />
         )  : (
-          <div className="flex justify-center items-center min-h-screen bg-black text-white">
+          <div className="flex justify-center items-center min-h-screen text-white">
             <h2 className="text-center text-2xl font-semibold">Planet model not found</h2>
           </div>
             )

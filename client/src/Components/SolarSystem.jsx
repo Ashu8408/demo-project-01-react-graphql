@@ -44,7 +44,7 @@ export default function SolarSystem() {
   }
 if (loading) {
     return (
-      <div className="flex justify-center items-center min-h-screen bg-black text-white">
+      <div className="flex justify-center items-center min-h-screen text-white">
         <h2 className="text-center text-2xl font-semibold">Loading...</h2>
       </div>
     );
@@ -52,7 +52,7 @@ if (loading) {
 
   if (planetError) {
     return (
-      <div className="flex justify-center items-center min-h-screen bg-black text-red-500">
+      <div className="flex justify-center items-center min-h-screen text-red-500">
         <h2 className="text-center text-2xl font-semibold">Error loading planets!</h2>
       </div>
     );

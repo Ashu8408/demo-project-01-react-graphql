@@ -9,14 +9,14 @@ export default function Homepage() {
         <HoverVideoPlayer 
           videoSrc="/planets_bg/jupiter.mp4" 
           loadingOverlay={
-            <div className="w-full h-full flex items-center justify-center bg-gray-900 text-white rounded-lg">
+            <div className="w-full h-full flex items-center justify-center text-white text-3xl rounded-lg">
               Loading...
             </div>  
           }
         />
       </div>
       {/* Card 1 (with nested Card 2 inside) */}
-      <div name="card_1" className="w-3/4 min-h-[75vh] p-6 border-8 border-gray-800 rounded-lg flex flex-col items-center justify-center space-y-6 play-on-hover" >
+      <div name="card_1" className="w-3/4 min-h-[75vh] p-6 border-8 border-gray-800 rounded-lg flex flex-col items-center justify-center space-y-6 play-on-hover z-1 pointer-events-none" >
         {/* Jupiter Title */}
         <p className="font-serif text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center">
           J u p i t e r
