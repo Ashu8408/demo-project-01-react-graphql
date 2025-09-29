@@ -54,14 +54,22 @@ export default function Planet() {
   return (
     <div className="flex justify-center items-center min-h-screen w-full bg-no-repeat bg-center bg-cover sm:bg-fixed px-4 sm:px-6 md:px-8 cursor-none p-20">
     <div className="absolute inset-0 flex justify-center items-center z-0 ">
-      <HoverVideoPlayer 
-        videoSrc={`/planets_bg/${planet.planets_bg}`} 
-        loadingOverlay={
-          <div className="w-full h-full flex items-center justify-center bg-gray-900 text-white rounded-lg">
-            Loading...
+      {planet?.planets_bg?.endsWith(".mp4") ? 
+        (
+          <HoverVideoPlayer 
+            videoSrc={`/planets_bg/${planet.planets_bg}`} 
+            loadingOverlay={
+              <div className="w-full h-full flex items-center justify-center bg-gray-900 text-white rounded-lg">
+                Loading...
+              </div>  
+            }
+          />
+        )  : (
+          <div className="flex justify-center items-center min-h-screen bg-black text-white">
+            <h2 className="text-center text-2xl font-semibold">Planet model not found</h2>
           </div>
-        }
-      />
+            )
+      }
     </div>
       <div name="card_1" className="w-full sm:w-11/12 md:w-3/4 min-h-[60vh] md:min-h-[75vh] p-4 sm:p-6 md:p-8 border-4 sm:border-6 md:border-8 border-gray-800 rounded-lg flex flex-col items-center justify-center space-y-4 sm:space-y-6 z-1 pointer-events-none">
         {/* Planet Title */}

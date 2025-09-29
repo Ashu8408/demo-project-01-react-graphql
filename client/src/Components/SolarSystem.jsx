@@ -81,38 +81,25 @@ if (loading) {
           ))}
         </div>
         {/* PLANET IMAGE */}
-<div className="planet-gif flex justify-center ">
-  {selectedPlanet && (
-    (selectedPlanet?.planets_bg?.endsWith(".mp4") ? (
-        <HoverVideoPlayer
-          videoSrc={selectedPlanet.media} 
-          pausedOverlay={
-            <img
-              src={selectedPlanet.thumbnail}
-              alt={selectedPlanet.name}
-              className="w-full h-full object-cover"
-            />
-          }
-          loadingOverlay={
-            <div className="w-full h-full flex items-center justify-center bg-black text-white">
-              Loading...
-            </div>
-          }
-          muted
-          loop
-          playsInline
-          className="w-full h-full object-cover"
-        />
-      )  : (
-        <img
-          src={selectedPlanet.media} // .gif file
-          alt={selectedPlanet.name}
-          className="w-full h-full object-cover pointer-events-none"
-        />
-          )
-        
-        ))}
-    </div>
+        <div className="planet-gif flex justify-center ">
+          {selectedPlanet && (
+            (selectedPlanet?.planets_bg?.endsWith(".mp4") ? 
+              (
+                <HoverVideoPlayer 
+                  videoSrc={`/planets_bg/${selectedPlanet.planets_bg}`} 
+                  loadingOverlay={
+                    <div className="w-full h-full flex items-center justify-center bg-gray-900 text-white rounded-lg">
+                      Loading...
+                    </div>  
+                  }
+                />
+              )  : (
+                    <div className="flex justify-center items-center min-h-screen text-red-500">
+                      <h2 className="text-center text-2xl font-semibold">Planet model not found</h2>
+                    </div>
+                  )
+            ))}
+        </div>
 
         {/* PLANET DATA */}
         <div className="flex item-center p-4 sm:p-6 bg-[#313f40] rounded-2xl shadow-lg overflow-y-auto max-h-[50vh] sm:max-h-[80vh]">
