@@ -53,7 +53,7 @@ export default function Planet() {
 
   return (
     <div className="flex justify-center items-center min-h-screen w-full bg-no-repeat bg-center bg-cover sm:bg-fixed px-4 sm:px-6 md:px-8 cursor-none p-20">
-    <div className="absolute inset-0 flex justify-center items-center z-0">
+    <div className="absolute inset-0 flex justify-center items-center z-0 ">
       <HoverVideoPlayer 
         videoSrc={`/planets_bg/${planet.planets_bg}`} 
         loadingOverlay={
@@ -63,9 +63,9 @@ export default function Planet() {
         }
       />
     </div>
-      <div name="card_1" className="w-full sm:w-11/12 md:w-3/4 min-h-[60vh] md:min-h-[75vh] p-4 sm:p-6 md:p-8 border-4 sm:border-6 md:border-8 border-gray-800 rounded-lg flex flex-col items-center justify-center space-y-4 sm:space-y-6">
+      <div name="card_1" className="w-full sm:w-11/12 md:w-3/4 min-h-[60vh] md:min-h-[75vh] p-4 sm:p-6 md:p-8 border-4 sm:border-6 md:border-8 border-gray-800 rounded-lg flex flex-col items-center justify-center space-y-4 sm:space-y-6 z-1 pointer-events-none">
         {/* Planet Title */}
-        <p className="font-serif text-white z-1 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center">
+        <p className="font-serif text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center z-1 pointer-events-none">
           {planet.name.split("").join(" ")}
         </p>
 
