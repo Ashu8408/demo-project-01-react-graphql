@@ -3,7 +3,7 @@ import { ApolloClient, InMemoryCache, HttpLink, } from "@apollo/client";
 import { ApolloProvider } from "@apollo/client/react";
 import Navbar from './Components/Navbar'
 import LensMouse from './LensMouse'
-import Homepage from './Homepage'
+import Homepage from './Components/Homepage'
 import SolarSystem from './Components/SolarSystem'
 import Planet from "./Components/Planet";
 
