@@ -2,10 +2,10 @@
 const PlanetList = [
   {
     id: 255,
-    name: "Sun",
+   name: "Sun",
     image: "/sun.gif",
     menu_image: "/sun_menu.jpg",
-    solar_system_image: "/sun.mp4",
+    planets_bg: "/sun.mp4",
     details: {
        type: "Star",
       about: `The Sun is a nearly perfect sphere of hot plasma and the central star of our Solar System, accounting for about 99.8% of its total mass. Its immense gravitational pull keeps the planets, asteroids, and comets in orbit. The Sun primarily consists of hydrogen (about 74%) and helium (about 24%), undergoing nuclear fusion in its core to produce energy. This process converts hydrogen into helium, releasing enormous amounts of heat and light. The Sun’s surface temperature is around 5,500°C, while its core reaches about 15 million°C. Its magnetic field drives solar activity such as sunspots, solar flares, and coronal mass ejections, which can influence space weather and affect technology on Earth. Light from the Sun takes about 8 minutes to reach Earth. The Sun is classified as a G-type main-sequence star (G2V) and is about 4.6 billion years old. It is expected to remain stable for another 5 billion years before expanding into a red giant and eventually becoming a white dwarf. The Sun is the ultimate source of energy for life on Earth, driving climate, weather, and photosynthesis, making it essential for the existence of ecosystems and human civilization.`
@@ -13,10 +13,10 @@ const PlanetList = [
   },
   {
     id: 1,
-    name: "Mercury",
+   name: "Mercury",
     image: "/mercury.jpg",
     menu_image: "/mercury_menu.jpg",
-    solar_system_image: "/mercury.mp4",
+    planets_bg: "/mercury.mp4",
     details: {
       aphelion: "69,816,900 km (0.4667 AU)",
       perihelion: "46,001,200 km (0.3075 AU)",
@@ -34,10 +34,10 @@ const PlanetList = [
   },
    {
      id: 2,
-     name: "Venus",
+   name: "Venus",
      image: "/venus.jpg",
      menu_image: "/venus_menu.jpg",
-     solar_system_image: "/venus.gif",
+     planets_bg: "/venus.gif",
      details: {
        aphelion: "108,939,000 km (0.728 AU)",
        perihelion: "107,477,000 km (0.718 AU)",
@@ -55,10 +55,10 @@ const PlanetList = [
    },
    {
      id:3,
-     name: "Earth",
+   name: "Earth",
      image: "/earth.jpg",
      menu_image: "/earth_menu.jpg",
-     solar_system_image: "/earth.mp4",
+     planets_bg: "/earth.mp4",
      details: {
        aphelion: "152,100,000 km (1.017 AU)",
        perihelion: "147,095,000 km (0.983 AU)",
@@ -80,7 +80,7 @@ const PlanetList = [
    name: "Mars",
    image: "/mars.jpg",
    menu_image: "/mars_menu.jpg",
-   solar_system_image: "/mars.mp4",
+   planets_bg: "/mars.mp4",
    details: {
      aphelion: "249,200,000 km (1.666 AU)",
      perihelion: "206,700,000 km (1.382 AU)",
@@ -98,10 +98,10 @@ const PlanetList = [
  },
  {
    id: 5,
-     name: "Jupiter",
+   name: "Jupiter",
    image: "/jupiter.jpg",
    menu_image: "/jupiter_menu.jpg",
-   solar_system_image: "/jupiter.mp4",
+   planets_bg: "/jupiter.mp4",
    details: {
      aphelion: "816,620,000 km (5.458 AU)",
      perihelion: "740,520,000 km (4.950 AU)",
@@ -122,7 +122,7 @@ const PlanetList = [
    name: "Saturn",
    image: "/saturn.jpg",
    menu_image: "/saturn_menu.jpg",
-   solar_system_image: "/saturn.mp4",
+   planets_bg: "/saturn.mp4",
    details: {
      aphelion: "1,513,325,783 km (10.123 AU)",
      perihelion: "1,353,572,956 km (9.041 AU)",
@@ -143,7 +143,7 @@ const PlanetList = [
    name: "Uranus",
    image: "/uranus.jpg",
    menu_image: "/uranus_menu.jpg",
-   solar_system_image: "/uranus.mp4",
+   planets_bg: "/uranus.mp4",
    details: {
      aphelion: "3,004,419,704 km (20.11 AU)",
      perihelion: "2,742,610,658 km (18.33 AU)",
@@ -164,7 +164,7 @@ const PlanetList = [
    name: "Neptune",
    image: "/neptune.jpg",
    menu_image: "/neptune_menu.jpg",
-   solar_system_image: "/neptune.mp4",
+   planets_bg: "/neptune.mp4",
    details: {
      aphelion: "4,537,039,826 km (30.33 AU)",
      perihelion: "4,459,753,056 km (29.81 AU)",
@@ -185,7 +185,7 @@ const PlanetList = [
    name: "Pluto",
    image: "/pluto.jpg",
    menu_image: "/pluto_menu.jpg",
-   solar_system_image: "/pluto.mp4",
+   planets_bg: "/pluto.mp4",
    details: {
      aphelion: "4,537,039,826 km (30.33 AU)",
      perihelion: "4,459,753,056 km (29.81 AU)",

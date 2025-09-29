@@ -21,9 +21,10 @@ const typeDefs = gql`
     type Planet {
         id: ID!,
         name: String!
-        details: PlanetDetails
-        menu_image: String!
         image: String!
+        menu_image: String!
+        planets_bg: String!
+        details: PlanetDetails
     }
 
     type Query {
